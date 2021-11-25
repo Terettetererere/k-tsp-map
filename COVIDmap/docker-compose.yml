@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  app:
+    container_name: sample_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/work
+    ports:
+      - "8501:8501"
+  
