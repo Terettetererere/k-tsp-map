@@ -131,7 +131,8 @@ df_title = ["ダム", "橋", "建築", "公園", "城"]
 df_set = ["damu02.csv", "hashi02.csv", "kentiku02.csv", "koen02.csv", "shiro02.csv"]
 df_selected = st.selectbox("データの選択", df_title)
 df_i = df_title.index(df_selected)
-df = pd.read_csv(df_set[df_i], encoding='shift_jis')
+df = "k-TSPmap/" + df_set[df_i]
+df = pd.read_csv(df, encoding='shift_jis')
 df.rename(columns={"北緯": "lat", "東経": "lon"}, inplace=True)
 st.write(df.head())
 
