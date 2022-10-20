@@ -138,7 +138,7 @@ st.write(df.head())
 
 # st.map(df[["lat", "lon"]])
 
-option_k = st.slider("集約する地点数", 1, 20, 1)
+option_k = st.slider("集約する地点数", 1, 15, 1)
 
 checkbox = st.checkbox("計算")
 
